@@ -1,0 +1,11 @@
+<p>create works!</p>
+<br>
+<form [formGroup]="book" (ngSubmit)="create()">
+    <table class="table table-striped" style="text-align: center">
+        <tr><th colspan="2">Add New Book</th></tr>
+        <tr><th>Title</th><td><input type="text" formControlName="title"></td></tr>
+        <tr><th>Author</th><td><input type="text" formControlName="author"></td></tr>
+        <tr><th>Description</th><td><input type="text" formControlName="description"></td></tr>
+        <tr><td colspan="2"><button class="btn btn-primary">Create</button></td></tr>
+    </table>
+</form>

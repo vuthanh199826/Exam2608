@@ -1,0 +1,14 @@
+<p>list works!</p>
+<br>
+
+<table style="text-align: center" class="table table-striped" border="1">
+    <tr><th>Title</th><th>Author</th><th>Description</th><td colspan="3"><a class="btn btn-success" routerLink="/book/create">Create</a></td></tr>
+    <tr *ngFor="let item of books">
+        <td>{{item.title}}</td>
+        <td>{{item.author}}</td>
+        <td>{{item.description}}</td>
+        <td><a class="btn btn-warning" [routerLink]="['/book/edit/'+ item.id]">edit</a></td>
+        <td><a class="btn btn-danger" [routerLink]="['/book/delete/'+ item.id]" >delete</a></td>
+        <td><a class="btn btn-primary" [routerLink]="['/book/view/'+ item.id]" >view</a></td>
+    </tr>
+</table>
